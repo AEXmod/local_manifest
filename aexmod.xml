@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="linaro"
+              fetch="git://android.git.linaro.org/"
+              review="review.android.git.linaro.org" />
+
+  <remote name="aexmod"
+              fetch="https://github.com/AEXmod"
+              revision="refs/heads/8.0" />
+
+  <!--Repos to remove-->
+  <remove-project name="platform_build" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+  <remove-project name="platform_build_soong" />
+  <remove-project name="platform_bionic" />
+  <remove-project name="platform_hardware_qcom_audio" />
+  <remove-project name="platform_hardware_qcom_display" />
+  <remove-project name="platform_hardware_qcom_media" />
+  <remove-project name="platform_external_DUtils" />
+  <remove-project name="platform_system_sepolicy" />
+  <remove-project name="platform_frameworks_base" />
+  <remove-project name="platform_frameworks_native" />
+  <remove-project name="platform_frameworks_av" />
+  <remove-project name="platform_vendor_aosp" />
+  <remove-project name="platform_packages_apps_Extensions" />
+  <remove-project name="platform_packages_apps_Settings" />
+  <remove-project name="platform/art" />
+  <remove-project name="platform_packages_apps_Dialer" />
+  <remove-project name="platform_packages_services_Telecomm" />
+  <remove-project name="platform_packages_services_Telephony" />
+  <remove-project name="platform_system_core" />
+  <remove-project name="platform_hardware_interfaces" />
+
+
+  <!--AEX MOD repos-->
+    <project path="build/make" name="platform_build" remote="aexmod" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="aexmod" />
+  <project path="bionic" name="platform_bionic" groups="pdk" remote="aexmod" />
+  <project name="hardware_qcom_media" path="hardware/qcom/media" remote="aexmod" />
+  <project name="hardware_qcom_media" path="hardware/qcom/media-caf/msm8996" revision="8.0-caf-8996" remote="aexmod" />
+  <project name="hardware_qcom_display" path="hardware/qcom/display" remote="aexmod" />
+  <project name="hardware_qcom_display" path="hardware/qcom/display-caf/msm8996" revision="8.0-caf-8996" remote="aexmod" />
+  <project name="hardware_qcom_audio" path="hardware/qcom/audio/default" remote="aexmod" />
+  <project name="hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8996" revision="8.0-caf-8996" remote="aexmod"  />
+  <project path="external/DUtils" name="platform_external_DUtils" remote="aexmod" />
+  <project path="frameworks/av" name="platform_frameworks_av" groups="pdk" remote="aexmod" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="aexmod" />
+  <project path="frameworks/native" name="platform_frameworks_native" remote="aexmod" />
+  <project path="packages/apps/Extensions" name="platform_packages_apps_Extensions" remote="aexmod" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="aexmod" />
+  <project path="packages/services/Telephony" name="platform_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="aexmod" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="aexmod" />
+  <project path="vendor/aosp" name="platform_vendor_aosp" remote="aexmod" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="aexmod" />
+  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" groups="pdk-fs" remote="aexmod" />
+  <project path="system/core" name="platform_system_core" groups="pdk" remote="aexmod" />
+  <project path="art" name="platform_art" groups="pdk" remote="aexmod" />
+  <project path="hardware/interfaces" name="platform_hardware_interfaces" groups="pdk" remote="aexmod" />
+
+  <!--LOS repos-->
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings"  remote="github" revision="lineage-15.0" />
+
+  <!--TC-->
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" remote="linaro" revision="master" />
+  <project path="prebuilts/kernel-tc" name="platform_prebuilts_kernel-tc" remote="aexmod" revision="gcc-7.2" />
+
+</manifest>
