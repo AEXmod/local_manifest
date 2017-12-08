@@ -47,11 +47,11 @@
   <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="aexmod" />
   <project path="bionic" name="platform_bionic" groups="pdk" remote="aexmod" />
   <project name="hardware_qcom_media" path="hardware/qcom/media" remote="aexmod" />
-  <project name="hardware_qcom_media" path="hardware/qcom/media-caf/msm8996" revision="8.0-caf-8996" remote="aexmod" />
+  <project name="AEXmod/hardware_qcom_media" path="hardware/qcom/media-caf/msm8996" revision="8.0-caf-8996" remote="github" />
   <project name="hardware_qcom_display" path="hardware/qcom/display" remote="aexmod" />
-  <project name="hardware_qcom_display" path="hardware/qcom/display-caf/msm8996" revision="8.0-caf-8996" remote="aexmod" />
+  <project name="AEXmod/hardware_qcom_display" path="hardware/qcom/display-caf/msm8996" revision="8.0-caf-8996" remote="github" />
   <project name="hardware_qcom_audio" path="hardware/qcom/audio/default" remote="aexmod" />
-  <project name="hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8996" revision="8.0-caf-8996" remote="aexmod"  />
+  <project name="AEXmod/hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8996" revision="8.0-caf-8996" remote="github"  />
   <project path="external/DUtils" name="platform_external_DUtils" remote="aexmod" />
   <project path="frameworks/av" name="platform_frameworks_av" groups="pdk" remote="aexmod" />
   <project path="frameworks/base" name="platform_frameworks_base" remote="aexmod" />
