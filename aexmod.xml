@@ -67,6 +67,17 @@
   <project path="art" name="platform_art" groups="pdk" remote="aexmod" />
   <project path="hardware/interfaces" name="platform_hardware_interfaces" groups="pdk" remote="aexmod" />
 
+  <!-- AEXmod extra repos -->
+  <project path="packages/apps/Spectrum" name="AEXmod/platform_packages_apps_Spectrum" remote="github" revision="mod" />
+  <project path="vendor/miui" name="AEXmod/platform_vendor_miui" remote="github" revision="Arnova8G2" />
+  <project path="external/libbfqio" name="AEXmod/android_external_libbfqio" remote="github" revision="master" />
+  <project path="packages/apps/OmniStyle" name="platform_packages_apps_OmniStyle" remote="aexmod" />
+
+  <!-- Device Gemini -->
+  <project path="device/xiaomi/gemini" name="AEXmod/platform_device_xiaomi_gemini" remote="github" revision="8.0-hmp" />
+  <project path="kernel/xiaomi/hmp_msm8996" name="AEXmod/platform_kernel_xiaomi_msm8996" remote="github" revision="HMP" />
+  <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="aexmod" />
+
   <!--LOS repos-->
   <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings"  remote="github" revision="lineage-15.0" />
 
